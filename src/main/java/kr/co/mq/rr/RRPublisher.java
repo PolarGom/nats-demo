@@ -16,13 +16,10 @@ public class RRPublisher {
 
     private String[] subjects;
 
-    private String replyTo;
-
-    public RRPublisher(String[] msgs, String[] subjects, String replyTo) {
+    public RRPublisher(String[] msgs, String[] subjects) {
 
         this.msgs = msgs;
         this.subjects = subjects;
-        this.replyTo = replyTo;
 
         this.connection = ConnectionUtil.getConnection();
     }

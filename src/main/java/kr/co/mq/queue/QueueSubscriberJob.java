@@ -1,4 +1,4 @@
-package kr.co.mq.rr;
+package kr.co.mq.queue;
 
 import io.nats.client.Connection;
 import io.nats.client.Dispatcher;
@@ -7,17 +7,21 @@ import kr.co.mq.util.Log;
 
 import java.nio.charset.StandardCharsets;
 
-public class RRSubscriberJob implements Runnable {
+public class QueueSubscriberJob implements Runnable {
 
     private Connection connection;
 
     private String jobName;
+
+    private String queueGroupName;
+
     private String[] subjects;
 
-    public RRSubscriberJob(String jobName, String... subjects) {
+    public QueueSubscriberJob(String jobName, String[] subjects, String queueGroupName) {
 
         this.jobName = jobName;
         this.subjects = subjects;
+        this.queueGroupName = queueGroupName;
         this.connection = ConnectionUtil.getConnection();
     }
 
@@ -28,14 +32,12 @@ public class RRSubscriberJob implements Runnable {
             String subject = msg.getSubject();
             String replyTo = msg.getReplyTo();
 
-            Log.print(jobName, " Sub: ", subject, replyTo, " 의 응답 정보 ", response);
-
-            this.connection.publish(replyTo, ("Received" + response).getBytes(StandardCharsets.UTF_8));
+            Log.print(this.jobName, " Sub: ", subject, replyTo, " 의 응답 정보 ", response);
         });
 
         for ( String subject : subjects ) {
 
-            dispatcher.subscribe(subject);
+            dispatcher.subscribe(subject, queueGroupName);
         }
 
         Log.print(jobName, " Sub: ", "응답 준비 완료");

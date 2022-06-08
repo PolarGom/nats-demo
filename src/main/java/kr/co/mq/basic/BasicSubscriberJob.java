@@ -23,12 +23,12 @@ public class BasicSubscriberJob implements Runnable {
 
     private void subscribe() {
 
-        Dispatcher dispatcher = this.connection.createDispatcher(msg -> {
+        Dispatcher dispatcher = connection.createDispatcher(msg -> {
             String response = new String(msg.getData(), StandardCharsets.UTF_8);
             String subject = msg.getSubject();
             String replyTo = msg.getReplyTo();
 
-            Log.print(this.jobName, " Sub: ", subject, replyTo, " 의 응답 정보 ", response);
+            Log.print(jobName, " Sub: ", subject, replyTo, " 의 응답 정보 ", response);
         });
 
         for ( String subject : subjects ) {
@@ -36,7 +36,7 @@ public class BasicSubscriberJob implements Runnable {
             dispatcher.subscribe(subject);
         }
 
-        Log.print(this.jobName, " Sub: ", "응답 준비 완료");
+        Log.print(jobName, " Sub: ", "응답 준비 완료");
     }
 
     @Override

@@ -1,14 +1,13 @@
 package kr.co.mq;
 
-import kr.co.mq.basic.BasicSubscriberJob;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 
 public abstract class CommonMQTest {
 
-    protected final String REPLY_TO = "reply-to";
+    protected String queueGroupName = "queue";
+
     protected String[] subjects = { "test" };
 
     protected String[] msgs;
