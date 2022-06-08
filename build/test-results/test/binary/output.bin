@@ -1,0 +1,10 @@
+$Job-0  Sub:  응답 준비 완료 
+Pub:  전송 시작 
+ Pub:  Send Message - 0 전송 
+ Pub:  Send Message - 1 전송 
+ Pub:  Send Message - 2 전송 
+Pub:  전송 완료 
+BJob-0  Sub:  test reply-to  의 응답 정보  Send Message - 0 
+BJob-0  Sub:  test reply-to  의 응답 정보  Send Message - 1 
+BJob-0  Sub:  test reply-to  의 응답 정보  Send Message - 2 
+종료

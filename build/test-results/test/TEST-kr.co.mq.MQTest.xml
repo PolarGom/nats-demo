@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kr.co.mq.MQTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-08T03:02:07" hostname="DESKTOP-OH9AU6U" time="8.114">
+  <properties/>
+  <testcase name="Request Reply 테스트" classname="kr.co.mq.MQTest" time="8.114"/>
+  <system-out><![CDATA[Job-0  Sub:  응답 준비 완료 
+Pub:  전송 시작 
+Pub:  Send Message - 0 전송 
+Pub:  Send Message - 1 전송 
+Pub:  Send Message - 2 전송 
+Pub:  전송 완료 
+Job-0  Sub:  test reply-to  의 응답 정보  Send Message - 0 
+Job-0  Sub:  test reply-to  의 응답 정보  Send Message - 1 
+Job-0  Sub:  test reply-to  의 응답 정보  Send Message - 2 
+종료
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
