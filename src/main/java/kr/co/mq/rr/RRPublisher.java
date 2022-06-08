@@ -48,10 +48,27 @@ public class RRPublisher {
 
             for ( String subject : subjects ) {
 
-                this.connection.request(subject, msg.getBytes(StandardCharsets.UTF_8), Duration.ofSeconds(3));
+                request(subject, msg);
             }
         }
 
         Log.print("Pub: ", "전송 완료");
+    }
+
+    private void request(String subject, String msg) throws InterruptedException {
+
+        try {
+
+            Message message = this.connection.request(subject, msg.getBytes(StandardCharsets.UTF_8), Duration.ofSeconds(5));
+
+            String response = new String(message.getData(), StandardCharsets.UTF_8);
+            String replyTo = message.getReplyTo();
+            String receivedSubject = message.getSubject();
+
+            Log.print("Pub Reply: ", receivedSubject, replyTo, " 의 정보: ", response);
+        } catch ( NullPointerException e ) {
+
+            Log.print("Pub Reply Message Timeout");
+        }
     }
 }

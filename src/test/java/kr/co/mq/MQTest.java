@@ -74,7 +74,7 @@ public class MQTest extends CommonMQTest {
             RRPublisher publisher = new RRPublisher(msgs, subjects, REPLY_TO);
             publisher.start();
 
-            Thread.sleep(5 * 1000);
+            Thread.sleep(10 * 1000);
 
             System.out.println("종료");
         } finally {

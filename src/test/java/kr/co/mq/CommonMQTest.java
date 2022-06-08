@@ -15,7 +15,7 @@ public abstract class CommonMQTest {
 
     protected List<Runnable> jobList = new ArrayList<>();
 
-    protected final int JOB_COUNT = 1;
+    protected final int JOB_COUNT = 3;
 
     protected ExecutorService service;
 

@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kr.co.mq.MQTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-08T03:02:07" hostname="DESKTOP-OH9AU6U" time="8.114">
+<testsuite name="kr.co.mq.MQTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-08T06:26:26" hostname="DESKTOP-OH9AU6U" time="23.152">
   <properties/>
-  <testcase name="Request Reply 테스트" classname="kr.co.mq.MQTest" time="8.114"/>
-  <system-out><![CDATA[Job-0  Sub:  응답 준비 완료 
-Pub:  전송 시작 
-Pub:  Send Message - 0 전송 
-Pub:  Send Message - 1 전송 
-Pub:  Send Message - 2 전송 
-Pub:  전송 완료 
-Job-0  Sub:  test reply-to  의 응답 정보  Send Message - 0 
-Job-0  Sub:  test reply-to  의 응답 정보  Send Message - 1 
-Job-0  Sub:  test reply-to  의 응답 정보  Send Message - 2 
+  <testcase name="Request Reply 테스트" classname="kr.co.mq.MQTest" time="23.152"/>
+  <system-out><![CDATA[[2022-06-08 15:26:26] Job-1  Sub:  응답 준비 완료 
+[2022-06-08 15:26:26] Job-2  Sub:  응답 준비 완료 
+[2022-06-08 15:26:26] Job-0  Sub:  응답 준비 완료 
+[2022-06-08 15:26:29] Pub:  전송 시작 
+[2022-06-08 15:26:29] Pub:  Send Message - 0 전송 
+[2022-06-08 15:26:29] Job-1  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHGy  의 응답 정보  Send Message - 0 
+[2022-06-08 15:26:29] Job-0  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHGy  의 응답 정보  Send Message - 0 
+[2022-06-08 15:26:29] Job-2  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHGy  의 응답 정보  Send Message - 0 
+[2022-06-08 15:26:29] Pub Reply:  _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHGy null  의 정보:  ReceivedSend Message - 0 
+[2022-06-08 15:26:29] Pub:  Send Message - 1 전송 
+[2022-06-08 15:26:29] Job-2  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHHZ  의 응답 정보  Send Message - 1 
+[2022-06-08 15:26:29] Job-0  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHHZ  의 응답 정보  Send Message - 1 
+[2022-06-08 15:26:29] Job-1  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHHZ  의 응답 정보  Send Message - 1 
+[2022-06-08 15:26:29] Pub Reply:  _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHHZ null  의 정보:  ReceivedSend Message - 1 
+[2022-06-08 15:26:29] Pub:  Send Message - 2 전송 
+[2022-06-08 15:26:29] Job-2  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHIA  의 응답 정보  Send Message - 2 
+[2022-06-08 15:26:29] Job-1  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHIA  의 응답 정보  Send Message - 2 
+[2022-06-08 15:26:29] Job-0  Sub:  test _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHIA  의 응답 정보  Send Message - 2 
+[2022-06-08 15:26:29] Pub Reply:  _INBOX.yIW22rq9iYawmfJYYyHHFm.yIW22rq9iYawmfJYYyHHIA null  의 정보:  ReceivedSend Message - 2 
+[2022-06-08 15:26:29] Pub:  전송 완료 
 종료
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

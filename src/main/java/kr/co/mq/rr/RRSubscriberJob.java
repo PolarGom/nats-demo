@@ -29,6 +29,8 @@ public class RRSubscriberJob implements Runnable {
             String replyTo = msg.getReplyTo();
 
             Log.print(this.jobName, " Sub: ", subject, replyTo, " 의 응답 정보 ", response);
+
+            this.connection.publish(replyTo, ("Received" + response).getBytes(StandardCharsets.UTF_8));
         });
 
         for ( String subject : subjects ) {

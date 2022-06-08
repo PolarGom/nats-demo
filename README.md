@@ -3,7 +3,7 @@
 #### 패키지 정보
 |패키지|내용|
 |---|---|
-|kr.co.mq.util|각 종 유리틸리티|
+|kr.co.mq.util|각 종 유틸리티|
 |kr.co.mq.basic|nats 기본 Pub/Sub|
 |kr.co.mq.rr|nats Request Reply Pub/Sub|
 
