@@ -48,7 +48,7 @@ public class RRPublisher {
 
             for ( String subject : subjects ) {
 
-                this.connection.request(subject, msg.getBytes(StandardCharsets.UTF_8), Duration.ofSeconds(3)).;
+                this.connection.request(subject, msg.getBytes(StandardCharsets.UTF_8), Duration.ofSeconds(3));
             }
         }
 
