@@ -4,6 +4,8 @@ import kr.co.mq.basic.BasicPublisher;
 import kr.co.mq.basic.BasicSubscriberJob;
 import kr.co.mq.rr.RRPublisher;
 import kr.co.mq.rr.RRSubscriberJob;
+import kr.co.mq.util.ConnectionUtil;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,10 +15,16 @@ import java.util.concurrent.Executors;
 public class MQTest extends CommonMQTest {
 
     @BeforeEach
-    public void setup() {
+    public void beforeEach() {
 
         createSubject("test");
         createMsg(3);
+    }
+
+    @AfterEach
+    public void afterEach() {
+
+        ConnectionUtil.allDisconnection();
     }
 
     @DisplayName("기본 Pub/Sub 테스트")

@@ -15,7 +15,7 @@
 
 2. 컨테이너를 생성한다.
 ```
-#> docker run -d -p 4222:4222 --name "nats" -ti nats:2.8.4-alpine3.15
+#> docker run -d -p 4222:4222 --name "nats" -ti nats:2.8.4-alpine3.15 --auth "mytoken"
 ```
 
 3. 생성한 컨테이너 로그를 확인하여 정상적으로 실행이 되었는지 확인한다.
